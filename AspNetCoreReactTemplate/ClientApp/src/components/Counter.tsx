@@ -1,35 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-interface ILocalState { 
-  currentCount: number
-}
+export const Counter = () => {
+  const [count, setCount] = useState(0);
+  const incrementCounter = () => setCount(count + 1);
 
-export class Counter extends Component<{}, ILocalState> {
-  static displayName = Counter.name;
+  return (
+    <div>
+      <h1>Counter</h1>
 
-  constructor (props: any) {
-    super(props);
-    this.state = { currentCount: 0 };
-    this.incrementCounter = this.incrementCounter.bind(this);
-  }
+      <p>This is a simple example of a React component.</p>
 
-  incrementCounter () {
-    this.setState({
-      currentCount: this.state.currentCount + 1
-    });
-  }
+      <p>Current count: <strong>{count}</strong></p>
 
-  render () {
-    return (
-      <div>
-        <h1>Counter</h1>
-
-        <p>This is a simple example of a React component.</p>
-
-        <p>Current count: <strong>{this.state.currentCount}</strong></p>
-
-        <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
-      </div>
-    );
-  }
+      <button className="btn btn-primary" onClick={incrementCounter}>Increment</button>
+    </div>
+  );
 }
