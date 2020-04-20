@@ -10,7 +10,7 @@ export const Counter = () => {
 
       <p>This is a simple example of a React component.</p>
 
-      <p>Current count: <strong>{count}</strong></p>
+      <p aria-live="polite">Current count: <strong>{count}</strong></p>
 
       <button className="btn btn-primary" onClick={incrementCounter}>Increment</button>
     </div>

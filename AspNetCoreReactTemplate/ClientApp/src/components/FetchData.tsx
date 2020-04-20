@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface IForecast {
-  dateFormatted: string,
+  date: string,
   temperatureC: number,
   temperatureF: number,
   summary: string
@@ -17,7 +17,7 @@ export const FetchData = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('api/SampleData/WeatherForecasts');
+      const response = await fetch('WeatherForecast');
       const data = await response.json();
       setState({ forecasts: data, loading: false });
     };
@@ -36,8 +36,8 @@ export const FetchData = () => {
       </thead>
       <tbody>
         {forecasts.map(forecast =>
-          <tr key={forecast.dateFormatted}>
-            <td>{forecast.dateFormatted}</td>
+          <tr key={forecast.date}>
+            <td>{forecast.date}</td>
             <td>{forecast.temperatureC}</td>
             <td>{forecast.temperatureF}</td>
             <td>{forecast.summary}</td>
