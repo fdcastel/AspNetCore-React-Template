@@ -1,6 +1,6 @@
 # AspNetCore-React-Template
 
-How the template for ASP.NET Core application with React really should be in 2019. :)
+How the Visual Studio template for ASP.NET Core application with React really should be today. :)
 
 ## Changes
 
@@ -8,3 +8,7 @@ How the template for ASP.NET Core application with React really should be in 201
 * Use React Hooks instead of classes
 * Upgraded everything
 * Removed _IIS settings_ from `launchSettings.json` (really? WTF!)
+
+## Recommended reading
+
+[React with TypeScript: Best Practices](https://www.sitepoint.com/react-with-typescript-best-practices) by Joe Previte.
