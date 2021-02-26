@@ -25,7 +25,7 @@ export const FetchData = () => {
   }, []);
 
   const renderForecastsTable = (forecasts: IForecast[]) => (
-    <table className='table table-striped'>
+    <table className='table table-striped' aria-labelledby="tableLabel">
       <thead>
         <tr>
           <th>Date</th>
@@ -53,7 +53,7 @@ export const FetchData = () => {
 
   return (
     <div>
-      <h1>Weather forecast</h1>
+      <h1 id="tableLabel" >Weather forecast</h1>
       <p>This component demonstrates fetching data from the server.</p>
       {contents}
     </div>
