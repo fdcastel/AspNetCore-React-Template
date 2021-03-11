@@ -1,11 +1,10 @@
 import React from 'react';
-import { Container } from 'reactstrap';
 import { NavMenu } from './NavMenu';
 
 export const Layout = (props: any) => (
     <div>
         <NavMenu />
-        <Container>{props.children}</Container>
+        <div className="container">{props.children}</div>
     </div>
 );
 
